@@ -1,0 +1,151 @@
+/*UNTUK MENGATUR AGAR SEMUA HASIL CODING SAMA*/
+* {
+  margin: 0; /*UNTUK MENGHILANGKAN MARGIN BAWAAN*/
+  padding: 0; /*UNTUK MENGHILANGKAN PADDING BAWAAN*/
+  box-sizing: border-box; /*UNTUK MENGATUR UKURAN ELEMEN AGAR TIDAK BERTAMBAH KARENA PADDING DAN BORDER*/
+  font-family: Arial, Helvetica, sans-serif; /*MENGATUR JENIS HURUF YANG DIGUNAKAN DI SEMUA HALAMAN*/
+}
+
+/*STYLING UNTUK BAGIAN BODY*/
+body {
+  font-family: Arial, sans-serif; /*MENGGUNAKAN FONT ARIAL DAN SANS-SERIF*/
+  line-height: 1.5; /*MEMBERIKAN JARAK ANTAR BARIS*/
+  color: grey; /*WARNA TEKS*/
+}
+
+/*STYLING UNTUK BAGIAN HEADER*/
+header {
+  background: lightslategray; /*WARNA LATAR BELAKANG*/
+  color: white; /*WARNA TEKS*/
+  text-align: center; /*TEKS RATA TENGAH*/
+  padding: 2rem; /*MEMBERIKAN RUANG*/
+}
+
+/*STYLING UNTUK BAGIAN HEADER H1*/
+header h1 {
+  color: black; /*WARNA TEKS*/
+}
+
+/*STYLING UNTUK BAGIAN NAV*/
+nav {
+  background: grey; /*WARNA LATAR BELAKANG*/
+  padding: 1rem; /*MEMBERIKAN RUANG*/
+}
+
+/*STYLING UNTUK BAGIAN DAFTAR NAV*/
+nav ul {
+  list-style: none; /*MENGHAPUS TITIK PADA DAFTAR*/
+  display: flex; /*MENGATUR ELEMEN JADI FLEXBOX*/
+  justify-content: center; /*MENENGAHKAN DAFTAR*/
+  gap: 2rem; /*MEMBERIKAN JARAK ANTAR ITEM*/
+}
+
+/*STYLING UNTUK BAGIAN TAUTAN DALAM NAV*/
+nav a {
+  color: white; /*WARNA TEKS*/
+  text-decoration: none; /*MENGHILANGKAN GARIS BAWAH PADA TAUTAN*/
+}
+
+/*EFEK HOVER PADA TAUTAN NAV*/
+nav a:hover {
+  color: black; /*MENGGANTI WARNA*/
+}
+
+/*STYLING UNTUK BAGIAN SECTION*/
+section {
+  padding: 2rem; /*MEMBERIKAN RUANG*/
+  max-width: 800px; /*MEMBATASI LEBAR*/
+  margin: 0 auto; /*WARNA TEKS*/
+}
+
+/*STYLING UNTUK BAGIAN JUDUL*/
+section h2 {
+  text-align: center; /*MENENGAHKAN TEKS*/
+  margin-bottom: 1.5rem; /*MEMBERIKAN JARAK BAWAH*/
+  color: black; /*WARNA TEKS*/
+}
+
+/*STYLING UNTUK BAGIAN JUDUL PROYEK*/
+section h3 {
+  color: black;
+}
+
+/*STYLING UNTUK BAGIAN FOTO PROFIL*/
+.profile-photo {
+  width: 150px; /*MENGATUR LEBAR GAMBAR*/
+  height: 150px; /*MENGATUR TINGGI GAMBAR*/
+  border-radius: 50%; /*GAMBAR JADI LINGKARAN*/
+  display: block; /*MENJADIKAN ELEMEN BLOK AGAR BISA DIBERI MARGIN AUTO*/
+  margin: 1rem auto; /*MENENGAHKAN GAMBAR*/
+}
+
+/*STYLING UNTUK BAGIAN TENTANG SAYA*/
+#about {
+  text-align: center; /*MENENGAHKAN TEKS*/
+  color: black;
+}
+
+/*STYLING UNTUK BAGIAN PROYEK*/
+.project {
+  background: lightslategray; /*WARNA LATAR BELAKANG*/
+  color: white;
+  padding: 1rem; /*MEMBERIKAN RUANG*/
+  margin-bottom: 1rem; /*MEMBERIKAN JARAK ANTAR PROJECT*/
+  border-radius: 5px; /*MEMBUAT SUDUT SEDIKIT TUMPUL*/
+
+  /*EFEK ANIMASI AWAL (SEBELUM TERLIHAT DI LAYAR) (NYONTEK DI YT)*/
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+/*STYLING UNTUK BAGIAN PROYEK*/
+.project.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/*STYLING UNTUK BAGIAN KONTAK*/
+#contactForm {
+  display: flex; /*MENGATUR ELEMEN MENJADI FLEXBOX*/
+  flex-direction: column; /*MENGATUR AGAR ELEMEN TERSUSUN KE BAWAH*/
+  gap: 1rem; /*MEMBERIKAN JARAK ANTAR ITEM*/
+}
+
+/*STYLING UNTUK BAGIAN INPUT DAN TEXTAREA*/
+#contactForm input,
+#contactForm textarea {
+  padding: 0.5rem; /*MEMBERIKAN RUANG*/
+  border: 1px solid black; /*WARNA BORDER*/
+  border-radius: 4px; /*MEMBUAT SUDUT SEDIKIT TUMPUL*/
+}
+
+/*STYLING UNTUK BAGIAN TOMBOL KIRIM*/
+#contactForm button {
+  background: grey; /*WARNA TOMBOL*/
+  color: white; /*WARNA TEKS*/
+  padding: 0.5rem; /*MEMBERIKAN RUANG*/
+  border: none; /*MENGHAPUS BORDER*/
+  border-radius: 4px; /*MEMBUAT SUDUT SEDIKIT TUMPUL*/
+}
+
+/*EFEK HOVER PADA TOMBOL KIRIM*/
+#contactForm button:hover {
+  background: black; /*WARNA LATAR BELAKANG*/
+}
+
+/*RESPONSIF UNTUK LAYAR KECIL (PERANGKAT MOBILE)*/
+@media (max-width: 600px) {
+  
+  /*MENGATUR DAFTAR NAV AGAR VERTIKAL*/
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  /*MENGURANGI PADDING SECTION AGAR SESUAI DENGAN LAYAR KECIL*/
+  section {
+    padding: 1rem;
+  }
+}
